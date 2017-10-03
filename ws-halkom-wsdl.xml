@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:sws="http://www.springframework.org/schema/web-services"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+  http://www.springframework.org/schema/web-services http://www.springframework.org/schema/web-services/web-services-2.0.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+       
+	
+<!-- ============ wsdl(s) ===================== -->	
+	
+	<sws:dynamic-wsdl id="ping"
+	    portTypeName="Ping"
+	    locationUri="/services/Ping"
+	    targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	  	<sws:xsd location="/WEB-INF/xsd/ping.xsd"/>
+	</sws:dynamic-wsdl>
+  
+  	<sws:dynamic-wsdl id="pingDb"
+	    portTypeName="PingDb"
+	    locationUri="/services/PingDb"
+	    targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	  	<sws:xsd location="/WEB-INF/xsd/ping-db.xsd"/>
+  	</sws:dynamic-wsdl>
+  	
+  	<sws:dynamic-wsdl id="findById"
+	    portTypeName="FindById"
+	    locationUri="/services/FindById"
+	    targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	  	<sws:xsd location="/WEB-INF/xsd/find-nalog-by-id.xsd"/>
+  	</sws:dynamic-wsdl>
+  	
+  	<sws:dynamic-wsdl id="getAllTypes"
+	    portTypeName="GetAllTypes"
+	    locationUri="/services/GetAllTypes"
+	    targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	  	<sws:xsd location="/WEB-INF/xsd/get-all-types.xsd"/>
+  	</sws:dynamic-wsdl>
+  	
+  	<sws:dynamic-wsdl id="insert"
+	    portTypeName="Insert"
+	    locationUri="/services/Insert"
+	    targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	  	<sws:xsd location="/WEB-INF/xsd/insert-nalog.xsd"/>
+  	</sws:dynamic-wsdl>
+  	
+  	<sws:dynamic-wsdl id="search"
+	    portTypeName="Search"
+	    locationUri="/services/Search"
+	    targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	  	<sws:xsd location="/WEB-INF/xsd/search-nalog.xsd"/>
+  	</sws:dynamic-wsdl>
+  	
+  	<sws:dynamic-wsdl id="update"
+	    portTypeName="Update"
+	    locationUri="/services/Update"
+	    targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	  	<sws:xsd location="/WEB-INF/xsd/update-nalog.xsd"/>
+  	</sws:dynamic-wsdl>
+	
+
+</beans>

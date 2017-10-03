@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee" 
+              xmlns:util="http://www.springframework.org/schema/util" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              			http://www.springframework.org/schema/beans/spring-beans.xsd 
+	   					http://www.springframework.org/schema/jee 
+	   					http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+						http://www.springframework.org/schema/util 
+						http://www.springframework.org/schema/util/spring-util-3.1.xsd"> 
+	
+	<!-- Jdbc -->
+	
+<!-- 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 		            <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> -->
+<!-- 		            <property name="url" value="jdbc:sqlserver://SGS-DSSQL12TEST:13300;databaseName=TradeDB" /> -->
+<!-- 		            <property name="username" value="BD101009"/> -->
+<!-- 		            <property name="password" value="BD101009"/> -->
+<!-- 	 </bean> -->
+	 
+	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+            <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+            <property name="url" value="jdbc:oracle:thin:@sgs-dsdeltatest5:1521:halcom" />
+            <property name="username" value="HALCOM"/>
+            <property name="password" value="!!halcom!!"/>
+        </bean>
+		
+	<bean id="halkomDao" class="wshalkom.model.dao.jdbc.JdbcHalkomDao">	
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	 </bean>	
+    
+
+</beans>
