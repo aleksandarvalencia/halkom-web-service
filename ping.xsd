@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://ws.wshalkom.javakurs.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	<xs:element name="pingRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pingInput" nillable="true" type="xs:string" />				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="pingResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pingOutput" nillable="true" type="xs:string" /> 
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+			
+</xs:schema>
+  

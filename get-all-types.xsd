@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://ws.wstelim.javakurs.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.wstelim.javakurs.com/xsd">
+	
+	
+	
+	<xs:element name="getAllTypesRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="purpose" nillable="true" type="xs:integer" />				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="getAllTypesResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="contactTypeList" nillable="true" type="ns:contactTypeList" /> 
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="contactTypeList">
+			<xs:sequence>
+				<xs:element name="contactType" nillable="true" type="ns:contactType" /> 
+			</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="contactType">
+			<xs:sequence>
+				<xs:element name="id" nillable="true" type="xs:integer" /> 
+				<xs:element name="name" nillable="true" type="xs:string" /> 				
+			</xs:sequence>
+	</xs:complexType>
+			
+</xs:schema>
+  

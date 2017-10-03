@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://ws.wshalkom.javakurs.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.wshalkom.javakurs.com/xsd">
+	<xs:element name="searchRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="imeb" nillable="true" type="xs:string" />	
+				<xs:element name="imed" nillable="true" type="xs:string" />	
+				<xs:element name="racunb" nillable="true" type="xs:string" />	
+				<xs:element name="racund" nillable="true" type="xs:string" />		
+				<xs:element name="iznos" nillable="true" type="xs:string" />	
+				<xs:element name="idPrejem" nillable="true" type="xs:string" />		
+				<xs:element name="datumvalute" nillable="true" type="xs:string" />			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="searchResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nalogList" nillable="true" type="ns:nalogList" /> 
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="nalogList">
+			<xs:sequence>
+				<xs:element name="nalog" nillable="true" type="ns:nalog" /> 
+			</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="nalog">
+			<xs:sequence>
+				<xs:element name="idNA" nillable="true" type="xs:integer" />
+				<xs:element name="tipdok" nillable="true" type="xs:integer" />
+				<xs:element name="idDok" nillable="true" type="xs:string" />	
+				<xs:element name="idPrejem" nillable="true" type="xs:string" />	
+				<xs:element name="datumvalute" nillable="true" type="xs:string" />
+				<xs:element name="racunb" nillable="true" type="xs:string" />	
+				<xs:element name="modb" nillable="true" type="xs:string" />
+				<xs:element name="sklicb" nillable="true" type="xs:string" />	
+				<xs:element name="racund" nillable="true" type="xs:string" />
+				<xs:element name="modd" nillable="true" type="xs:string" />	
+				<xs:element name="sklicd" nillable="true" type="xs:string" />
+				<xs:element name="iznos" nillable="true" type="xs:string" />
+				<xs:element name="imeb" nillable="true" type="xs:string" />
+				<xs:element name="ulicab" nillable="true" type="xs:string" />
+				<xs:element name="krajb" nillable="true" type="xs:string" />
+				<xs:element name="imed" nillable="true" type="xs:string" />			
+				<xs:element name="ulicad" nillable="true" type="xs:string" />	
+				<xs:element name="krajd" nillable="true" type="xs:string" />
+				<xs:element name="namen" nillable="true" type="xs:string" />
+				<xs:element name="sifra" nillable="true" type="xs:string" />
+				<xs:element name="datumprometa" nillable="true" type="xs:string" />					
+			</xs:sequence>
+	</xs:complexType>
+			
+</xs:schema>
+  
